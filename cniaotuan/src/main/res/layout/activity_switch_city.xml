@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+    <RelativeLayout
+        android:id="@id/title_bar"
+        style="@style/title_bar_style"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/back_img"
+            style="@style/left_back_img_style" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/title_bar_center_text_style"
+            android:textColor="@color/title_text_color"
+            android:text="@string/switch_city" />
+
+        <ImageView
+            android:id="@+id/iv_right_img"
+            style="@style/right_btn_style"
+            android:src="@drawable/selector_refresh" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/city_divider_color" />
+    </RelativeLayout>
+    <include layout="@layout/search_view_layout"/>
+    <RelativeLayout
+        android:id="@+id/rl_loading"
+        android:background="@color/title_bar_color"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/iv_loading"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/anim_loading"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在加载......"
+            android:textSize="16sp"
+            android:textColor="#909090"
+            android:layout_below="@id/iv_loading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl_loading_fail"
+        android:background="@color/title_bar_color"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            layout="@layout/layout_home_net_failed"/>
+    </RelativeLayout>
+</LinearLayout>

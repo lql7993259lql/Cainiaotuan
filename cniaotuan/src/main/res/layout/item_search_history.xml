@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="43.0dip">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="43.0dip"
+        android:background="@drawable/selector_item_search">
+
+        <ImageView
+            android:id="@+id/iconImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:src="@mipmap/time_icon"/>
+
+        <TextView
+            android:id="@+id/historyContentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="42.0dip"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:layout_toRightOf="@id/iconImageView"
+            android:gravity="center_vertical"
+            android:text="香菇炖鸡面"
+            android:textColor="@color/color_77"
+            android:textSize="@dimen/size_21"/>
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:src="@mipmap/filter_line"/>
+    </RelativeLayout>
+</RelativeLayout>

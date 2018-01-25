@@ -1,0 +1,107 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/search_background_color">
+
+    <include
+        android:id="@+id/titleRelativelayout"
+        layout="@layout/title_search" />
+
+    <LinearLayout
+        android:id="@+id/commonStatusLinearLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/titleRelativelayout"
+        android:layout_marginTop="10.0dip"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/pagerLinearLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/hotwordsViewPager"
+                    android:layout_width="fill_parent"
+                    android:layout_height="90.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:background="@color/white" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="20.0dip"
+                    android:layout_marginLeft="5.0dip"
+                    android:layout_marginRight="5.0dip"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/indicatorLL"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/progressRelativeLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="110.0dip"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="5.0dip"
+                android:layout_marginRight="5.0dip"
+                android:background="@color/white">
+
+                <ProgressBar
+                    android:id="@+id/progressbar"
+                    android:layout_width="20.0dip"
+                    android:layout_height="20.0dip"
+                    android:layout_centerInParent="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:paddingBottom="5.0dip"
+            android:paddingLeft="5.0dip"
+            android:paddingTop="5.0dip"
+            android:text="@string/search_search_history"
+            android:textColor="@color/search_font_color"
+            android:textSize="@dimen/size_21" />
+
+        <ListView
+            android:id="@+id/searchHistoryListView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:background="@color/white"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/searchListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/titleRelativelayout"
+        android:background="@color/white"
+        android:divider="@null"
+        android:listSelector="@android:color/transparent"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip"
+        android:visibility="gone" />
+
+</RelativeLayout>

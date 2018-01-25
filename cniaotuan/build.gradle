@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '27.0.1'
+    useLibrary 'org.apache.http.legacy'
+    defaultConfig {
+        applicationId "com.example.cniaotuan"
+        minSdkVersion 15
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        //参数说明
+        manifestPlaceholders = [
+                GETUI_APP_ID : "mIRc6MOwSK9eNKhQBl74l",
+                GETUI_APP_KEY : "epwbN5wJvf9FA0zWm9Fgo1",
+                GETUI_APP_SECRET : "1zkQu8GkoZAerPbhqKHbP8",
+                PACKAGE_NAME : applicationId
+        ]
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "arm64-v8a", "mips", "mips64", "x86", "x86_64"
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.jakewharton:butterknife:5.1.1'
+    compile 'com.yolanda.nohttp:nohttp:1.0.4'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile files('libs/baidumapapi_base_v4_0_0.jar')
+    // 其他依赖
+    compile 'com.facebook.fresco:fresco:0.12.0'
+    //个推的依赖包
+    compile 'com.getui:sdk:2.9.0.0'
+    compile 'cn.bmob.android:bmob-sdk:3.5.0'
+    compile project(':libs_PullToRefresh')
+    compile files('libs/open_sdk_r5756.jar')
+    compile 'org.greenrobot:eventbus:3.0.0'
+    compile 'cn.yipianfengye.android:zxing-library:1.9'
+    compile files('libs/MobCommons-2016.0830.1940.jar')
+    compile project(':weiboSDK')
+    compile files('libs/BmobPay_v3.0.3_160621.jar')
+}

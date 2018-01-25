@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:id="@+id/home_net_failed_layout"
+                  android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:orientation="vertical"
+                  android:paddingBottom="20.0dip"
+                  android:paddingTop="10.0dip"
+                  android:visibility="visible" >
+
+        <ImageView
+            android:id="@+id/loadImgeView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15.0dip"
+            android:background="@mipmap/load_failure" />
+
+        <TextView
+            style="@style/load_failed_msg_textStyle"
+            android:text="网络异常" />
+
+        <TextView
+            android:id="@+id/tipTextView"
+            style="@style/load_failed_info_textStyle"
+            android:text="点击屏幕尝试重新加载" />
+
+        <Button
+            android:id="@+id/nextActivityButton"
+            android:layout_width="150.0dip"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pay_btn_selector"
+            android:padding="8.0dip"
+            android:text="重新加载"
+            android:textColor="@color/white"
+            android:textSize="16.0sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="43.0dip"
+    android:background="@drawable/selector_item_search">
+
+    <RelativeLayout
+        android:id="@+id/rl_history_clearup"
+        android:layout_width="fill_parent"
+        android:layout_height="43.0dip">
+
+        <TextView
+            android:id="@+id/historyContentTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10.0dip"
+            android:gravity="center"
+            android:text="@string/clear_search_history"
+            android:textColor="@color/color_77"
+            android:textSize="@dimen/size_21"/>
+    </RelativeLayout>
+</RelativeLayout>
