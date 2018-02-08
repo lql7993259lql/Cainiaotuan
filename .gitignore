@@ -6,3 +6,6 @@
 /build
 /captures
 libs_PullToRefresh/build
+weiboSDK/build/
+.idea
+
