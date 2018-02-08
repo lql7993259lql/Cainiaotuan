@@ -24,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setToolbar();
+        NdkUtil n = new NdkUtil();
+        System.out.println("================================>>>"+n.getStringFromNative()+"");
 //        toolbar.setTitle("asdas");
 //        toolbar.setSubtitle("SubTitle");
 //        toolbar.setLogo(R.mipmap.sss);
@@ -139,4 +141,6 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu, menu); //解析menu布局文件到menu
         return true;
     }
+
+
 }
