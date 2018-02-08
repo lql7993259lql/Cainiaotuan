@@ -8,4 +8,4 @@
 libs_PullToRefresh/build
 weiboSDK/build/
 .idea
-
+.idea/misc.xml
